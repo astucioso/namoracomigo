@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer ver algo especial?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro-container">
+        <h1>Tenho uma surpresa pra você!</h1>
+        <button onclick="startExperience()" class="start-button">Clique aqui para ver</button>
+    </div>
+
+    <audio id="music" src="musica.mp3" preload="auto"></audio>
+
+    <script>
+        function startExperience() {
+            // Toca a música
+            const music = document.getElementById("music");
+            music.play();
+            
+            // Redireciona para a página principal
+            setTimeout(() => {
+                window.location.href = "main.html";
+            }, 500); // Dá um pequeno delay antes de ir para a página principal
+        }
+    </script>
+</body>
+</html>
